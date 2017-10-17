@@ -1,6 +1,6 @@
-Za desktop i web aplikaciju korišæen je GlashFish server,MySQL baza podataka kao i Wamp server za povezivanje na bazu.
+Za desktop i web aplikaciju korišcen je GlashFish server,MySQL baza podataka kao i Wamp server za povezivanje na bazu.
 Naziv šeme u bazi podataka m_electronic(collation: UTF8-UTF8_unicode_ci).
 
 Administratorske informacije desktop aplikacije:
-korisnièko ime: toni91
+korisnicko ime: toni91
 lozinka: toni1991
