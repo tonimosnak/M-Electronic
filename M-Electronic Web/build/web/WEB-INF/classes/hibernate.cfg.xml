@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!--
+DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+
+Copyright (c) 2008, 2016 Oracle and/or its affiliates. All rights reserved.
+
+Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+The contents of this file are subject to the terms of either the GNU
+General Public License Version 2 only ("GPL") or the Common
+Development and Distribution License("CDDL") (collectively, the
+"License"). You may not use this file except in compliance with the
+License. You can obtain a copy of the License at
+http://www.netbeans.org/cddl-gplv2.html
+or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
+specific language governing permissions and limitations under the
+License.  When distributing the software, include this License Header
+Notice in each file and include the License file at
+nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
+particular file as subject to the "Classpath" exception as provided
+by Oracle in the GPL Version 2 section of the License file that
+accompanied this code. If applicable, add the following below the
+License Header, with the fields enclosed by brackets [] replaced by
+your own identifying information:
+"Portions Copyrighted [year] [name of copyright owner]"
+
+If you wish your version of this file to be governed by only the CDDL
+or only the GPL Version 2, indicate your decision by adding
+"[Contributor] elects to include this software in this distribution
+under the [CDDL or GPL Version 2] license." If you do not indicate a
+single choice of license, a recipient has the option to distribute
+your version of this file under either the CDDL, the GPL Version 2 or
+to extend the choice of license to its licensees as provided above.
+However, if you add GPL Version 2 code and therefore, elected the GPL
+Version 2 license, then the option applies only if the new code is
+made subject to such option by the copyright holder.
+
+Contributor(s):
+-->
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/m_electronic?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password"></property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.connection.autocommit">true</property>
+    <property name="hibernate.show_sql">true</property>
+    <mapping class="Users.Korisnici"/>
+    <mapping class="Order.Order"/>
+    <mapping class="Kategorije.Kategorije"/>
+    <mapping class="Podkategorije.Elektrika"/>
+    <mapping class="Podkategorije.ElektronskeKomponente"/>
+    <mapping class="Podkategorije.ElementiZaMontazu"/>
+    <mapping class="Podkategorije.InstrumentiIAlat"/>
+    <mapping class="Podkategorije.IzvoriNapajanja"/>
+    <mapping class="Podkategorije.Kablovi"/>
+    <mapping class="Podkategorije.OptoElementi"/>
+    <mapping class="Podkategorije.PotrosniMaterijal"/>
+    <mapping class="Podkategorije.Svetlo"/>
+    <mapping class="Podkategorije.Transformatori"/>
+    <mapping class="Podkategorije.Zvuk"/>
+    <mapping class="Proizvodi.Prekidaci"/>
+    <mapping class="Proizvodi.UtikaciIUticnice"/>
+    <mapping class="Proizvodi.Tasteri"/>
+    <mapping class="Proizvodi.Razvodnici"/>
+    <mapping class="Proizvodi.Kondenzatori"/>
+    <mapping class="Proizvodi.Tranzistori"/>
+    <mapping class="Proizvodi.IntegrisanaKola"/>
+    <mapping class="Proizvodi.Tiristori"/>
+    <mapping class="Proizvodi.Diode"/>
+    <mapping class="Proizvodi.Releji"/>
+    <mapping class="Proizvodi.Otpornici"/>
+    <mapping class="Proizvodi.Kutije"/>
+    <mapping class="Proizvodi.AluminijumskiHladnjaci"/>
+    <mapping class="Proizvodi.PertinaksPloce"/>
+    <mapping class="Proizvodi.SrafovskaRoba"/>
+    <mapping class="Proizvodi.OtporniciPromenljivi"/>
+    <mapping class="Proizvodi.Instrumenti"/>
+    <mapping class="Proizvodi.LemnaOprema"/>
+    <mapping class="Proizvodi.RucniAlat"/>
+    <mapping class="Proizvodi.KutijeZaAlatIPribor"/>
+    <mapping class="Proizvodi.Pribor"/>
+    <mapping class="Proizvodi.Baterije"/>
+    <mapping class="Proizvodi.Punjaci"/>
+    <mapping class="Proizvodi.Ispravljaci"/>
+    <mapping class="Proizvodi.Invertori"/>
+    <mapping class="Proizvodi.Konvertori"/>
+    <mapping class="Proizvodi.AudioVideo"/>
+    <mapping class="Proizvodi.Data"/>
+    <mapping class="Proizvodi.ZaKompjutere"/>
+    <mapping class="Proizvodi.ZaNapajanja"/>
+    <mapping class="Proizvodi.Provodnici"/>
+    <mapping class="Proizvodi.LeDiode"/>
+    <mapping class="Proizvodi.FotoDiode"/>
+    <mapping class="Proizvodi.FotoTranzistori"/>
+    <mapping class="Proizvodi.SMD"/>
+    <mapping class="Proizvodi.Sprejevi"/>
+    <mapping class="Proizvodi.Paste"/>
+    <mapping class="Proizvodi.TinolZicaZaLemljenje"/>
+    <mapping class="Proizvodi.SredstvaZaCiscenje"/>
+    <mapping class="Proizvodi.BaterijskeLampe"/>
+    <mapping class="Proizvodi.Sijalice"/>
+    <mapping class="Proizvodi.Svetiljke"/>
+    <mapping class="Proizvodi.Torusni"/>
+    <mapping class="Proizvodi.ZaPrintMontazu"/>
+    <mapping class="Proizvodi.Ugradni"/>
+    <mapping class="Proizvodi.Zvucnici"/>
+    <mapping class="Proizvodi.Mikrofoni"/>
+    <mapping class="Proizvodi.Sirene"/>
+    <mapping class="Proizvodi.PiezoElementi"/>
+    <mapping class="Proizvodi.ZvucneKutije"/>
+  </session-factory>
+</hibernate-configuration>

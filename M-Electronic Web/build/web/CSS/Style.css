@@ -1,0 +1,407 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 9, 2017, 1:06:52 PM
+    Author     : Toni
+*/
+
+#Body{
+    margin: 0px;
+    padding: 0px;
+    background: #ffffff;
+    overflow: scroll;
+}
+
+#Wrapper{
+    width: 1320px; 
+    background: #ffffff;
+    margin: 0px auto; 
+    overflow: hidden;
+}
+
+
+
+#Header{
+    clear: both;
+}
+
+#HeaderImage{
+    background: #ffffff;
+    width: 150px;
+    float: left;
+}
+
+#HeaderTitle{
+    background:#ffffff;
+    width:auto;
+    float: left;
+    margin-left: 20px;
+    height: 150px;
+}
+
+#Title{
+    float: bottom;
+    color:brown;
+    font-weight:900;
+    font-size: 200%;
+    font-family: sans-serif;
+    text-shadow: 3px 2px 5px #000;
+    text-decoration: none;
+}
+
+#TitlePosition{
+    margin-bottom: 0px;
+    margin-top: 40px;
+}
+
+#KategoryBorder{
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid brown;
+    clear: both;
+    float: left;
+    font-family: sans-serif;
+    font-size: 100%;
+    padding-bottom: 0px;
+}
+
+a.ex:visited, a.ex:link{
+    text-decoration: none;
+}
+
+a.ex:hover{
+    text-decoration: underline;
+}
+   
+#Kategories{
+    font-weight: 600;
+    color: brown;
+}
+
+#Form{
+    float: right;
+    margin-top: 5px;
+    width: 700px;
+}
+
+#TextArea{
+    padding: 0px;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+#Username, #Password{
+    width: 100px;
+    height: 13px;
+    border: 2px solid black;
+}
+
+#Login{
+    width: 53px;
+    height: 19px;
+    font-size: 12px; 
+    border: 2px solid dimgray;
+}
+
+#Register{
+    width: 80px;
+    height: 19px;
+    font-size: 12px;
+    border: 2px solid dimgray;
+    float: right;
+}
+
+#Navigation{
+    border: 2px solid brown;
+    clear: both;
+    float: left;
+    width: 99.7%;
+}
+
+#Home, #AboutUs, #Contact{
+    font-weight: 900; 
+    font-family: sans-serif;
+    margin: 5px;
+    margin-left: 150px;
+    float: left;
+    color: brown;
+    
+}
+
+#Korpa{
+    float: right;
+    clear: right;
+}
+
+#RegistrationDiv{
+    clear: right;
+    float: right;
+    padding-top: 3%;
+    padding-right: 35%;
+}
+
+#RegistrationForms{
+    float: right
+}
+
+.Control{
+    color: red;
+    float: right;
+    clear: right;
+    padding-right: 25px;
+    margin-top: 2px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.data{
+    float: right;
+    clear: right;
+    margin: 0px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+#RegisterButton{
+    float: right;
+    clear: right;
+    margin-top: 0px;
+    padding-right: 40px
+}
+
+#RegisterForm{
+    float: right;
+}
+
+#LoginForm{
+    float: right;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+#UserLogin{
+    height: 19px;
+    float:right;
+    margin-right: 20px;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#UserLogged{
+    margin: 0px 0px;
+    margin-top: 1px;
+}
+
+#RegisterSuccess{
+    clear: right;
+    float: right;
+    padding-top: 5%;
+    padding-right: 35%;
+    font-family: sans-serif;
+}
+
+#NotLogin{
+    float:left;
+    clear: left;
+}
+
+#UserNotLogged{
+    margin: 0px 0px;
+    margin-left: 300px;
+    color: red;
+}
+
+#Login-out{
+    float:right;
+}
+
+#Logout{
+    width: 53px;
+    height: 19px;
+    font-size: 12px; 
+    border: 2px solid dimgray;
+}
+
+#Podkategorije{
+    float: right;
+    padding-right: 40%;
+}
+
+#Podkategorija{
+    text-align: center;
+    border: 2px solid brown;
+    margin: 10px;
+    padding: 0px 25px;
+}
+
+#Proizvodi{
+    float: right;
+    margin-left: 5px;
+    width: 83%;
+}
+
+#Proizvod{
+    border: 1px solid brown;
+    margin-top: 10px;
+    margin-left: 5px;
+    float: left;
+    width: 99.3%;
+}
+
+#Image{
+    border: 1px solid brown;
+    margin: 3px 3px;
+    float: left;
+}
+
+#Naziv{
+    float: left;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-left: 10px;
+    border: none;
+}
+
+#Cena{
+    float: left;
+    margin-top: 40px;
+    margin-left: 20px;
+    width: 80px;
+    border: none;
+    font-family: sans-serif;
+    font-size: 90%;
+}
+
+#Komada{
+    float: left;
+}
+
+#Opis{
+    float: right;
+    width: 500px;
+    margin-top: 30px;
+    margin-left: 20px;
+    border: none;
+    font-family: sans-serif;
+    font-size: 80%;
+}
+
+#SifraProizvoda{
+    float: left;
+    margin-right: 5px;
+    width: 150px;
+    border: none;
+    font-family: sans-serif;
+    font-size: small;
+}
+
+#NaStanju{
+    float: left;
+    margin-bottom: 0px;
+    margin-top: 13px;
+    font-family: sans-serif;
+    font-size: small;
+}
+
+#KomadaUKorpu{
+    width: 30px;
+    margin-top: 12px;
+}
+
+#KomadaUKorpuDiv{
+    float: right;
+    clear: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#ProizvodUKorpi{
+    clear: both;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+
+
+table, tr, th{
+   border: 1px solid black;
+   border-collapse: collapse;
+   text-align: center;
+   margin: 0px 0px;
+}
+
+#ZavrsiSaKupovinom{
+    float: left;
+    margin-left: 600px;
+    margin-top: 50px;
+}
+
+#Dostava{
+    float: left;
+    clear: left;
+    margin-left: 500px;
+    font-family: sans-serif;
+}
+
+#UspesnaPorudzbina{
+    float: left;
+    clear: left;
+    margin-left: 400px;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+#Pretraga{
+    float: right;
+    clear: right;
+    margin-right: 150px;
+    margin-top: 30px;
+}
+
+#Unos{
+    font-family: sans-serif;
+    font-size: 80%;
+}
+
+#praznaKorpa{
+    float: left;
+    font-family: sans-serif;
+    margin-left: 600px;
+}
+
+#nepronadjeniProizvodi{
+    font-family: sans-serif;
+    float: right;
+    margin-right: 400px;
+    margin-top: 100px;
+}
+
+#Tabela{
+    font-size: 90%;
+    width: 1320px;
+}
+
+#Posiljka{
+    float: right;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#Napomena{
+    float: left;
+}
+
+#Kupi{
+    float: left;
+    clear: both;
+    margin-left: 160px;
+    margin-top: 20px;
+}
+
+
+
