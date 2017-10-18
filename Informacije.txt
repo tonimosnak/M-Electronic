@@ -1,4 +1,4 @@
-Za desktop i web aplikaciju korišcen je GlassFish server,MySQL baza podataka kao i Wamp server za povezivanje na bazu.
+Za desktop i web aplikaciju korišcen je GlassFish server,MySQL baza podataka kao i wamp server za povezivanje na bazu.
 Naziv šeme u bazi podataka m_electronic(collation: UTF8-UTF8_unicode_ci).
 
 Administratorske informacije desktop aplikacije:
