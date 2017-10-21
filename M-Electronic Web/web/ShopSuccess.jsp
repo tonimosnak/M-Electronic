@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div id="UspesnaPorudzbina">
-                <p>Vaša narudžbina je uspešno realizovana. Informacije o narudžbini poslata su vam na email edresu. Hvala Vam na ukazanom poverenju.</p> 
+                <p>Vaša narudžbina je uspešno realizovana. Informacije o narudžbini poslate su vam na email edresu. Hvala Vam na ukazanom poverenju.</p> 
             </div>
         </div>        
     </body>            
