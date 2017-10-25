@@ -3,11 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Toni/Desktop/M-Electronic/M-Electronic%20Web/src/java/Controller/Paging.java</file>
             <file>file:/C:/Users/Toni/Desktop/M-Electronic/M-Electronic%20Web/web/HomePage.jsp</file>
             <file>file:/C:/Users/Toni/Desktop/M-Electronic/M-Electronic%20Web/web/Cart.jsp</file>
-            <file>file:/C:/Users/Toni/Desktop/M-Electronic/M-Electronic%20Web/web/Header.jsp</file>
-            <file>file:/C:/Users/Toni/Desktop/M-Electronic/M-Electronic%20Web/web/Paging.jsp</file>
-            <file>file:/C:/Users/Toni/Desktop/M-Electronic/M-Electronic%20Web/web/CSS/Style.css</file>
+            <file>file:/C:/Users/Toni/Desktop/M-Electronic/M-Electronic%20Web/src/java/DomainParameterProducts/FastSearch.java</file>
+            <file>file:/C:/Users/Toni/Desktop/M-Electronic/M-Electronic%20Web/src/java/DomainParametarSubcategories/ParametarPodkategorija.java</file>
+            <file>file:/C:/Users/Toni/Desktop/M-Electronic/M-Electronic%20Web/src/java/DomainParameterProducts/PodkategorijaUtikaciIUticnice.java</file>
+            <file>file:/C:/Users/Toni/Desktop/M-Electronic/M-Electronic%20Web/src/java/DomainParameterProducts/PodkategorijaKondenzatori.java</file>
+            <file>file:/C:/Users/Toni/Desktop/M-Electronic/M-Electronic%20Web/src/java/Cart/Cart.java</file>
+            <file>file:/C:/Users/Toni/Desktop/M-Electronic/M-Electronic%20Web/src/java/DomainParameterProducts/PodkategorijaPrekidaci.java</file>
+            <file>file:/C:/Users/Toni/Desktop/M-Electronic/M-Electronic%20Web/src/java/DomainHomePage/HomePage.java</file>
         </group>
     </open-files>
 </project-private>

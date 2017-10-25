@@ -5,13 +5,14 @@
  */
 package DomainParameterProducts;
 
+import Controller.Paging;
 import Model.HibernateUtil;
 import Products.UtikaciIUticnice;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -36,19 +37,45 @@ public class PodkategorijaUtikaciIUticnice extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        try{
+            String link = "podkategorija_utikaci_i_uticnice";
+            String directori = "UtikaciIUticnice";
             boolean infoShow = true;
+            int page = Integer.parseInt(request.getParameter("page"));
+            
             Session session = HibernateUtil.createSessionFactroy().openSession();
-            String directori = "Utikaci_i_uticnice";
-            request.setAttribute("directori", directori);
+            
+            Cookie[] pageCookie = request.getCookies();
+            
+            for(Cookie cookie : pageCookie){
+                if("Page".equals(cookie.getName())){
+                    cookie.setValue(String.valueOf(page) + ',' + link);
+                    response.addCookie(cookie);
+                }
+            }
+            
+            Query queryPage = session.createQuery("from UtikaciIUticnice").setFirstResult((page - 1)*4).setMaxResults(4);
+            List<UtikaciIUticnice> result = queryPage.list();
+            
             Query query = session.createQuery("from UtikaciIUticnice");
             List<UtikaciIUticnice>lista =  query.list();
-            request.setAttribute("listaProizvodi", lista);
+            
+            Paging paging = new Paging();
+            request.setAttribute("directori", directori);
+            request.setAttribute("pagingLinksSubcategorie", paging.paging(lista, page));
+            request.setAttribute("lastPage", paging.lastPage());
+            request.setAttribute("listaProizvodi", result);
             request.setAttribute("infoShow", infoShow);
+            request.setAttribute("subcategory", link);
+            
             request.getRequestDispatcher("HomePage.jsp").forward(request, response);
+            
             if(session.isOpen()){
                 session.close();
             }
+        }catch(Exception ex){
+            ex.printStackTrace();
+            response.sendRedirect("./");
         }
     }
 
