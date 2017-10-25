@@ -41,31 +41,48 @@ public class FastSearch extends HttpServlet {
             throws ServletException, IOException, SQLException {
         String pretraga =  request.getParameter("pretraga");
         boolean infoShow = true;
+        boolean productsExist = true;
+        
         if(!pretraga.equals("")){
-            List<FastSearchItems> list = new ArrayList();
+            
+            List<FastSearchBeans> productsList = new ArrayList();
+            
+            FastSearchBeans product = null;
             DataBase base = DataBase.getInstance();
             DatabaseMetaData md = base.connection.getMetaData();
             ResultSet rs = md.getTables(null, null, "podkategorija%", null);
+            
             while(rs.next()){
-                PreparedStatement statement = base.connection.prepareStatement("select * from "+rs.getString(3)+" where naziv like '%"+pretraga+"%' or cena like '%"+pretraga+"%' or komada like '%"+pretraga+"%' or opis like '%"+pretraga+"%' or sifra_proizvoda like '%"+pretraga+"%' or slika like '%"+pretraga+"%' or na_stanju like '%"+pretraga+"%'");
-                ResultSet result = statement.executeQuery();
-                while(result.next()){
-                    FastSearchItems parametar = new FastSearchItems();
-                    parametar.setNaziv(result.getString("naziv"));
-                    parametar.setCena(result.getDouble("cena"));
-                    parametar.setKomada(result.getInt("komada"));
-                    parametar.setSlika(result.getString("slika"));
-                    parametar.setOpis(result.getString("opis"));
-                    parametar.setNa_stanju(result.getString("na_stanju"));
-                    parametar.setSifra_proizvoda(result.getInt("sifra_proizvoda"));
-                    parametar.setKomada(result.getInt("komada"));
-                    list.add(parametar);
+                
+                PreparedStatement statementProducts = base.connection.prepareStatement("select * from "+rs.getString(3)+" where naziv like '%"+pretraga+"%' or cena like '%"+pretraga+"%' or komada like '%"+pretraga+"%' or opis like '%"+pretraga+"%' or sifra_proizvoda like '%"+pretraga+"%' or slika like '%"+pretraga+"%' or na_stanju like '%"+pretraga+"%'");
+                
+                ResultSet resultProducts = statementProducts.executeQuery();
+                
+                while(resultProducts.next()){
+                    product = new FastSearchBeans();
+                    product.setNaziv(resultProducts.getString("naziv"));
+                    product.setCena(resultProducts.getDouble("cena"));
+                    product.setKomada(resultProducts.getInt("komada"));
+                    product.setSlika(resultProducts.getString("slika"));
+                    product.setOpis(resultProducts.getString("opis"));
+                    product.setNa_stanju(resultProducts.getString("na_stanju"));
+                    product.setSifra_proizvoda(resultProducts.getInt("sifra_proizvoda"));
+                    product.setKomada(resultProducts.getInt("komada"));
+                    productsList.add(product);
                 }
+                
             }
-
-            request.setAttribute("listaProizvodi", list);
+            
+            request.setAttribute("listaProizvodi", productsList);
             base.connection.close();
+        }else{
+            productsExist = false;
         }
+        
+        request.setAttribute("fastSearchPaging", productsExist);
+        
+        
+        
         request.setAttribute("infoShow", infoShow);
         request.getRequestDispatcher("HomePage.jsp").forward(request, response);
         

@@ -65,13 +65,8 @@ public class Login extends HttpServlet {
                 
                 if(k.getKorisnickoIme() != null && k.getLozinka() != null){
                     username = request.getParameter("usernameLogin");
-//                    cookie = new Cookie("Cart","123");
                     jsession.setAttribute("username", username);
-//                    cookie.setMaxAge(60);
-//                    response.addCookie(cookie);
                     request.setAttribute("username", username);
-//                    query = session.createSQLQuery("create table "+jsession.getAttribute("username")+"(id int primary key auto_increment,sifra_proizvoda int,naziv varchar(45),komada int,cena decimal(4,2))");
-//                    query.executeUpdate();
                     response.sendRedirect("/M-Electronic/");
                 }else{
                     String wrong = "Pogrešno korisničko ime ili lozinka!";
@@ -80,10 +75,8 @@ public class Login extends HttpServlet {
                 }
             }else{
                 if(logout == 1){
-//                query = session.createSQLQuery("drop table "+jsession.getAttribute("username")+"");
-//                query.executeUpdate();
-                jsession.removeAttribute("username");
-                logout = 0;
+                    jsession.removeAttribute("username");
+                    logout = 0;
                 }
                 response.sendRedirect("/M-Electronic/");
             }

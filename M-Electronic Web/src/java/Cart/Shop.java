@@ -39,13 +39,15 @@ public class Shop extends HttpServlet {
         boolean notLogedIn = false;        
         HttpSession session = request.getSession();
         Cart cart = new Cart();
+        CartBean cartBean = new CartBean();
         CartBean cartItems = new CartBean();
+        cartBean = (CartBean) session.getAttribute("Cart");
         String action = request.getParameter("action");
-        if(session.getAttribute("username")!= null){
+        if(session.getAttribute("username")!= null && cartBean != null && !cartBean.itemList().isEmpty()){
             if(!action.equals("") && action != null){
                 if(action.equals("continue")){
                     request.getRequestDispatcher("Delivery.jsp").forward(request, response);
-                }else if(action.equals("buy")){
+                }else if(action.equals("buy") && cartBean != null && !cartBean.itemList().isEmpty()){
                     Object objCartItem = session.getAttribute("Cart");
                     if(objCartItem != null){
                         cartItems = (CartBean) objCartItem;
@@ -58,11 +60,11 @@ public class Shop extends HttpServlet {
             }
             
         }else{
-            CartBean cartBean = new CartBean();
-            cartBean = (CartBean) session.getAttribute("Cart");
-            request.setAttribute("Itemslist", cartBean.itemList());
+            if(cartBean != null){
+                request.setAttribute("Itemslist", cartBean.itemList());
+                cart.allItemsCost(request, response);
+            }
             request.setAttribute("notLogedIn", notLogedIn);
-            cart.allItemsCost(request, response);
             request.getRequestDispatcher("Cart.jsp").forward(request, response);
         }
         

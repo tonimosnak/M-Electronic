@@ -55,7 +55,7 @@ public class ParametarPodkategorija extends HttpServlet {
                 System.out.println(jsession.getAttribute("username").toString());
             }
             
-            int number = Integer.parseInt(request.getParameter("Kategorija"));
+            int number = Integer.parseInt(request.getParameter("id"));
             
             Kategorije kategorija = (Kategorije) session.get(Kategorije.class,number);
             
@@ -105,6 +105,8 @@ public class ParametarPodkategorija extends HttpServlet {
                    request.setAttribute("listaPodKategorija", lista11);
                    break; 
             }
+            
+            request.setAttribute("page", "1");
             
             request.getRequestDispatcher("HomePage.jsp").forward(request, response);
             if(session.isOpen()){

@@ -14,6 +14,7 @@ import java.sql.SQLException;
 import java.text.DecimalFormat;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -35,6 +36,15 @@ public class Cart extends HttpServlet {
         action = request.getParameter("action");
         int komadaNaStanju = 0;
         int komadaUKorpu = 0;
+        String[] cookiePageParse = null;
+        
+        Cookie[] pageCookie = request.getCookies();
+            for(Cookie cookie : pageCookie){
+                if("Page".equals(cookie.getName())){
+                    cookiePageParse = cookie.getValue().split(",");
+                    System.out.println(cookiePageParse[0]);
+                }
+            }
         
         try{
             if(request.getParameter("komada") != null && request.getParameter("komadaNaStanju") != null){
@@ -75,20 +85,41 @@ public class Cart extends HttpServlet {
                                 request.setAttribute("Itemslist", cartBean.itemList());
                             }
                         }
+                        
                 }
             }
-            request.getRequestDispatcher("Cart.jsp").forward(request, response);
+            
+            if(action.equals("showCart") || action.equals("delete")){
+                try{
+                    request.getRequestDispatcher("Cart.jsp").forward(request, response);
+                }catch(Exception ex){
+                    ex.printStackTrace();
+                    response.sendRedirect("./");
+                    return;
+                }
+            }else{
+                try{
+                    response.sendRedirect("./"+cookiePageParse[1]+"?page="+cookiePageParse[0]+"");
+                }catch(Exception ex){
+                    ex.printStackTrace();
+                    response.sendRedirect("./");
+                    return;
+                }
+            }
+            
+            cookiePageParse = null;
+            
         }catch(Exception  ex){
             ex.printStackTrace();
-            session = request.getSession();
-            cartBean = new CartBean();
-            if(session.getAttribute("Cart") != null){
-                CartItemBean cartItem = new CartItemBean();
-                cartBean = (CartBean) session.getAttribute("Cart");
-                allItemsCost(request, response);
-                request.setAttribute("Itemslist", cartBean.itemList());
+            try{
+                response.sendRedirect("./"+cookiePageParse[1]+"?page="+cookiePageParse[0]+"");
+            }catch(Exception ex1){
+                ex1.printStackTrace();
+                response.sendRedirect("./");
+                return;
             }
-            request.getRequestDispatcher("Cart.jsp").forward(request, response);
+            
+            cookiePageParse = null;
         }
     }
     

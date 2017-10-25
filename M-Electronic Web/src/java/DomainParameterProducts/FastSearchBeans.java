@@ -1,5 +1,5 @@
 package DomainParameterProducts;
-public class FastSearchItems {
+public class FastSearchBeans {
     private String naziv;
     private double cena;
     private int komada;

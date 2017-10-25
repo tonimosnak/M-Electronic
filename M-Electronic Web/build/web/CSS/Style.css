@@ -135,6 +135,7 @@ a.ex:hover{
 #Korpa{
     float: right;
     clear: right;
+    width: 100px;
 }
 
 #RegistrationDiv{
@@ -371,7 +372,14 @@ table, tr, th{
 #praznaKorpa{
     float: left;
     font-family: sans-serif;
-    margin-left: 600px;
+    margin-left: 575px;
+}
+
+#returnToShopping{
+    float: left;
+    clear: both;
+    margin-left: 575px;
+    margin-top: 20px;
 }
 
 #nepronadjeniProizvodi{
@@ -403,5 +411,59 @@ table, tr, th{
     margin-top: 20px;
 }
 
+#ItemsInCart{
+    font-family: sans-serif;
+    float: right;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+#CartImage{
+    float: left;
+    clear: both;
+    width: 70px;
+}
+
+#Paging{
+    font-family: sans-serif;
+    color: black;
+}
+
+#PagingDiv{
+    clear: both;
+    padding-top: 20px; 
+}
+
+#PagingAlign{
+    margin-left: 400px;
+}
+
+#PagingDoublePrevious{
+    float: left;
+}
+
+#PagingPrevious{
+    float: left;
+    margin: 0px 10px 0px 10px;
+}
+
+#PageNumber{
+    float: left;
+    margin-right:3px;
+}
+
+#LastPage{
+    float: left;
+    margin-left: 3px; 
+}
+
+#NextPage{
+    float: left;
+    margin: 0px 10px 0px 10px;
+}
+
+#DoubleNextPage{
+    float: left;
+}
 
 

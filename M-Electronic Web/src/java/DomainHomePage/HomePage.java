@@ -3,30 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DomainParameterProducts;
+package DomainHomePage;
 
-import Controller.Paging;
-import Model.HibernateUtil;
-import Products.Kondenzatori;
-import Products.Prekidaci;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.hibernate.Query;
-import org.hibernate.Session;
+import javax.servlet.http.Cookie;
 
 /**
  *
  * @author Toni
  */
-@WebServlet(name = "podkategorija_kondenzatori", urlPatterns = {"/podkategorija_kondenzatori"})
-public class PodkategorijaKondenzatori extends HttpServlet {
+@WebServlet(name = "HomePage", urlPatterns = {"/HomePage"})
+public class HomePage extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,47 +32,9 @@ public class PodkategorijaKondenzatori extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            String link = "podkategorija_kondenzatori";
-            boolean infoShow = true;
-            Session session = HibernateUtil.createSessionFactroy().openSession();
-            int page = Integer.parseInt(request.getParameter("page"));
-            
-            Cookie[] pageCookie = request.getCookies();
-            for(Cookie cookie : pageCookie){
-                if("Page".equals(cookie.getName())){
-                    cookie.setValue(String.valueOf(page) + ',' + link);
-                    response.addCookie(cookie);
-                }
-            }
-            
-            Query queryPage = session.createQuery("from Kondenzatori").setFirstResult((page - 1)*4).setMaxResults(4);
-            List<Kondenzatori> result = queryPage.list();
-            
-            String directori = "Kondenzatori";
-            
-            request.setAttribute("directori", directori);
-            
-            Query query = session.createQuery("from Kondenzatori");
-            List<Kondenzatori>lista =  query.list();
-            
-            Paging paging = new Paging();
-            request.setAttribute("pagingLinksSubcategorie", paging.paging(lista, page));
-            request.setAttribute("lastPage", paging.lastPage());
-            
-            request.setAttribute("listaProizvodi", result);
-            request.setAttribute("infoShow", infoShow);
-            request.setAttribute("subcategory", link);
-            
-            request.getRequestDispatcher("HomePage.jsp").forward(request, response);
-            
-            if(session.isOpen()){
-                session.close();
-            }
-        }catch(Exception ex){
-            ex.printStackTrace();
-            request.getRequestDispatcher("HomePage.jsp").forward(request, response);
-        }
+        Cookie cookie = new Cookie("Page" , "");
+        response.addCookie(cookie);
+        request.getRequestDispatcher("HomePage.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
