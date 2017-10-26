@@ -33,7 +33,7 @@ CREATE TABLE `podkategorija_kondenzatori` (
   `na_stanju` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `datum` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `podkategorija_kondenzatori` (
 
 LOCK TABLES `podkategorija_kondenzatori` WRITE;
 /*!40000 ALTER TABLE `podkategorija_kondenzatori` DISABLE KEYS */;
-INSERT INTO `podkategorija_kondenzatori` VALUES (1,'Elektrolitski',66,89,'Kondenzator 1000uF 25V.jpeg','JAMICON , ±20% , -55+105°C , 5000h , ELEKTROLITSKI LOW ESR , 1000uF 25V',400,'Na stanju','2017-07-10 22:21:20'),(3,'Polipropilenski',60,85,'Polipropilenski 1,5uF 100V.jpeg','WIMA MKT Film , Serija MKS 4 , R=15 , ±10% , -55+100°C , 1,5uF 100V',401,'Na stanju','2017-07-10 22:22:09'),(4,'Polipropilenski',96,50,'Polipropilenski 1,5uF 100V.jpeg','WIMA MKT Film , Serija MKS 4 , R=15 , ±10% , -55+100°C , 1,5uF 250V',402,'Na stanju','2017-07-10 22:22:52'),(5,' Elektrolitski',70,100,'Kondenzator 1000uF 25V.jpeg','JAMICON , ±20% , -55+105°C , 5000h , ELEKTROLITSKI LOW ESR , 470uF 35V',403,'Na stanju','2017-07-10 22:25:43'),(6,' Elektrolitski',150,97,'Kondenzator 1000uF 25V.jpeg','JAMICON , ±20% , -55+105°C , 5000h , ELEKTROLITSKI LOW ESR ,330uF 50V',404,'Na stanju','2017-07-10 22:27:02'),(8,'Elektrolitski',500,100,'Nichicon-elko.jpg','Nichicon Muse audio kondenzator, 20%, 50v, +85C, 1000uF, 18mm; 40mm; 7.5mm',406,'Na stanju','2017-10-07 22:16:30');
+INSERT INTO `podkategorija_kondenzatori` VALUES (1,'Elektrolitski',66,0,'Kondenzator 1000uF 25V.jpeg','JAMICON , ±20% , -55+105°C , 5000h , ELEKTROLITSKI LOW ESR , 1000uF 25V',400,'Na stanju','2017-07-10 22:21:20'),(3,'Polipropilenski',60,39,'Polipropilenski 1,5uF 100V.jpeg','WIMA MKT Film , Serija MKS 4 , R=15 , ±10% , -55+100°C , 1,5uF 100V',401,'Na stanju','2017-07-10 22:22:09'),(4,'Polipropilenski',96,38,'Polipropilenski 1,5uF 100V.jpeg','WIMA MKT Film , Serija MKS 4 , R=15 , ±10% , -55+100°C , 1,5uF 250V',402,'Na stanju','2017-07-10 22:22:52'),(5,' Elektrolitski',70,99,'Kondenzator 1000uF 25V.jpeg','JAMICON , ±20% , -55+105°C , 5000h , ELEKTROLITSKI LOW ESR , 470uF 35V',403,'Na stanju','2017-07-10 22:25:43');
 /*!40000 ALTER TABLE `podkategorija_kondenzatori` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-17 12:30:57
+-- Dump completed on 2017-10-26 15:01:38

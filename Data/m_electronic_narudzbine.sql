@@ -30,7 +30,7 @@ CREATE TABLE `narudzbine` (
   `datum` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `napomena` longtext COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `narudzbine` (
 
 LOCK TABLES `narudzbine` WRITE;
 /*!40000 ALTER TABLE `narudzbine` DISABLE KEYS */;
-INSERT INTO `narudzbine` VALUES (1,'qwer1234','1,1;','Kurirskom službom','2017-10-17','');
+INSERT INTO `narudzbine` VALUES (1,'qwer1234','1,1;','Kurirskom službom','2017-10-17',''),(2,'toni1991','1,1;','Kurirskom službom','2017-10-21',''),(3,'qwer1234','1,1;','Preuzimanje u radnji','2017-10-21',''),(4,'qwer1234','1,1;','Kurirskom službom','2017-10-21',''),(5,'qwer1234','400,82;','Preuzimanje u radnji','2017-10-24',''),(6,'qwer1234','401,1;','Preuzimanje u radnji','2017-10-24',''),(7,'qwer1234','401,1;','Preuzimanje u radnji','2017-10-24','');
 /*!40000 ALTER TABLE `narudzbine` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-17 12:30:57
+-- Dump completed on 2017-10-26 15:01:38

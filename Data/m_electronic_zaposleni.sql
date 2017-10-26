@@ -40,7 +40,7 @@ CREATE TABLE `zaposleni` (
 
 LOCK TABLES `zaposleni` WRITE;
 /*!40000 ALTER TABLE `zaposleni` DISABLE KEYS */;
-INSERT INTO `zaposleni` VALUES (8,'Toni','Mosnak','Toni91','toni1991','2017-09-12 20:17:53',2),(9,'Toni','Mosnak','toni91','toni1991','2017-10-07 21:47:31',1);
+INSERT INTO `zaposleni` VALUES (8,'Toni','Mosnak','Toni91','toni1991','2017-09-12 20:17:53',2),(9,'Toni','Mosnak','toni91','toni1991','2017-10-25 15:35:18',1);
 /*!40000 ALTER TABLE `zaposleni` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-17 12:30:54
+-- Dump completed on 2017-10-26 15:01:34

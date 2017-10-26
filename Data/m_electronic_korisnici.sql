@@ -33,7 +33,7 @@ CREATE TABLE `korisnici` (
   `mesto_i_postanski_broj` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `ulica_i_broj` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `korisnici` (
 
 LOCK TABLES `korisnici` WRITE;
 /*!40000 ALTER TABLE `korisnici` DISABLE KEYS */;
-INSERT INTO `korisnici` VALUES (27,'Toni','Mosnak','toni91','*1F861A28729BD8C6E5156936DEA3B38CD8EE5953','tonimosnak@yahoo.com','0645980100','Janošik 26362','Čmelikova 22'),(34,'Pera','Peri?','qwer1234','*D75CC763C5551A420D28A227AC294FADE26A2FF2','tonimosnak@yahoo.com','0645980100','Janošik 26362','?melikova 22');
+INSERT INTO `korisnici` VALUES (27,'Toni','Mosnak','toni91','*1F861A28729BD8C6E5156936DEA3B38CD8EE5953','tonimosnak@yahoo.com','0645980100','Janošik 26362','Čmelikova 22'),(34,'Pera','Peri?','qwer1234','*D75CC763C5551A420D28A227AC294FADE26A2FF2','tonimosnak@yahoo.com','0645980100','Janošik 26362','?melikova 22'),(35,'Toni','Mosnak','toni1991','*1F861A28729BD8C6E5156936DEA3B38CD8EE5953','tonimosnak@yahoo.com','0645980100','Janošik 26362','?melikova 22');
 /*!40000 ALTER TABLE `korisnici` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-17 12:30:58
+-- Dump completed on 2017-10-26 15:01:39
